@@ -11,3 +11,9 @@ export const removeFromReadingList = (payLoad) =>{
         payLoad,
     }
 }
+export const addToFinishedList = (payLoad) =>{
+    return {
+        type:'ADD_TO_FINISHED_LIST',
+        payLoad,
+    }
+}
