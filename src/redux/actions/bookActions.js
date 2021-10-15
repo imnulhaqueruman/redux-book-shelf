@@ -15,5 +15,12 @@ export const removeFromReadingList = (payload) =>{
     }
 }
 
+export const addToFinishedList = (payload) =>{
+    return{
+        type:'ADD_TO_FINISHED_LIST',
+        payload:payload,
+    }
+}
+
 
 

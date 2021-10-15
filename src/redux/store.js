@@ -7,6 +7,6 @@ const combinedReducer = combineReducers({
     ///user :userReducer
 })
 
-export const store = createStore(combinedReducer,composeWithDevTools())
+export const  store = createStore(combinedReducer,composeWithDevTools())
 
 

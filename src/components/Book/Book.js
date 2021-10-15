@@ -7,7 +7,7 @@ import {
   // HiCheckCircle 
 } from 'react-icons/hi';
 import { useDispatch } from "react-redux";
-import { addToFinishedList, addToReadingList, removeFromReadingList } from "../../redux/actions/bookAction";
+import { addToFinishedList, addToReadingList, removeFromReadingList } from "../../redux/actions/bookActions";
 import styles from './book.module.css'
 const SingleBook = (props) => {
   const { title, author, coverImageUrl, synopsis } = props.book;
@@ -24,14 +24,14 @@ const SingleBook = (props) => {
           <div className='card-body'>
             <h5 className='card-title'>{title}</h5>
             <h6>{author}</h6>
-            <p className='card-text'>{synopsis.slice(0, 500)} ...</p>
+            {/*<p className='card-text'>{synopsis.slice(0, 500)} ...</p>*/}
           </div>
         </div>
       </div>
       <div className={styles.control_icons} >
         {window.location.href === 'http://localhost:3000/reading' && 
         <HiMinusCircle
-         onClick={() => dispatch(removeFromReadingList(props.book))}
+         onClick={() => dispatch(removeFromReadingList(props.book.id))}
          title="Remove from list" className={styles.minus_icon} /> }
 
        {window.location.href === 'http://localhost:3000/' &&

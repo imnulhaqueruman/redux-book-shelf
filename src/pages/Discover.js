@@ -3,14 +3,14 @@ import Book from '../components/Book/Book';
 //import books from '../fakeData/books.json'
 import PageLayout from '../components/PageLayout/PageLayout';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadBooks } from '../redux/actions/bookAction';
+import { loadBooks } from '../redux/actions/bookActions';
 const Discover = () => {
     const books = useSelector((state) =>{
          return state.books.discoverList
     })
     const dispatch = useDispatch()
 
-    useEffect(() =>dispatch(loadBooks()),[])
+    //useEffect(() =>dispatch(loadBooks()),[])
     
     console.log(books)
     return (

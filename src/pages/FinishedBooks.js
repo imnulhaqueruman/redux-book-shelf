@@ -8,6 +8,7 @@ const FinishedBooks = () => {
   const books= useSelector(state =>{
     return state.books.finishedList
   })
+  console.log('finish', books)
   return (
     <PageLayout>
       {
