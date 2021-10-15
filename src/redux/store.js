@@ -1,10 +1,12 @@
-import { createStore,combineReducers } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import bookReducer from "./reducer/reducer";
-
+import { createStore,combineReducers } from 'redux';
+import bookReducer from './reducer/bookReducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const combinedReducer = combineReducers({
     books:bookReducer,
+    ///user :userReducer
 })
-const store = createStore(combinedReducer,composeWithDevTools())
-export default store;
+
+export const store = createStore(combinedReducer,composeWithDevTools())
+
+
